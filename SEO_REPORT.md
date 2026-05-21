@@ -63,3 +63,16 @@ Date: 2026-05-21
 7. **Implement schema for FAQs or BreadcrumbList** — If multi-page site planned, structure for nested navigation; for single page, add FAQSchema for common questions (coverage limits, turnaround time, service areas)
 
 8. **Set up Google Search Console & Analytics** — Verify site ownership, monitor search performance, crawl errors, and user engagement; track phone and form submissions separately
+
+## Round 2 — repaired 2026-05-21
+- sitemap.xml: created at `/workspace/Websites/inland-marine-insurance/sitemap.xml` with **1** URL (homepage)
+- robots.txt: created at `/workspace/Websites/inland-marine-insurance/robots.txt`
+- Domain used: **`https://example.com`** — **FLAGGED**: no production domain detectable from `index.html` (no canonical), `git remote` (only repo URL `MCERQUA/inland-marine-insurance.git`), no `package.json`, no `netlify.toml`/`vercel.json`, no `README`. Placeholder used. Replace with real production domain once deployed.
+- Framework detected: **Static HTML** (single `index.html`, no build tooling, no `package.json`, no framework dependencies)
+- Files changed:
+  - Created: `/workspace/Websites/inland-marine-insurance/sitemap.xml`
+  - Created: `/workspace/Websites/inland-marine-insurance/robots.txt`
+  - Modified: `/workspace/Websites/inland-marine-insurance/index.html` (added `<meta name="robots" content="index, follow">` to `<head>`)
+- meta robots tag: **added** (was missing — inserted between viewport and title)
+- Sitemap XML validated well-formed via `xml.etree.ElementTree`
+
