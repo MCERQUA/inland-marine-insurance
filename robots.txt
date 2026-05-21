@@ -1,0 +1,54 @@
+# robots.txt for inland-marine-insurance
+# Allow all major search engines and AI crawlers
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Disallow build / dev / VCS paths
+User-agent: *
+Disallow: /.netlify/
+Disallow: /node_modules/
+Disallow: /_next/static/chunks/
+Disallow: /.git/
+
+Sitemap: https://example.com/sitemap.xml
