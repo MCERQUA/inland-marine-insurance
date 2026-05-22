@@ -76,3 +76,20 @@ Date: 2026-05-21
 - meta robots tag: **added** (was missing — inserted between viewport and title)
 - Sitemap XML validated well-formed via `xml.etree.ElementTree`
 
+## Round 3 — repaired 2026-05-22
+- **Domain status: ASSUMED (still TBD).** Probed: `inland-marine-insurance.com` → no DNS, `inlandmarineinsurance.com` → no DNS, `contractorschoiceagency.com/inland-marine[-insurance]` → 404, `mcerqua.github.io/inland-marine-insurance/` → 404, `*.netlify.app` / `*.vercel.app` → 404. No `vercel.json` / `netlify.toml` / `CNAME` / GitHub Actions in repo. Per task fallback: adopted `https://inland-marine-insurance.com/` as the assumed canonical (matches repo name pattern). **TBD-DOMAIN markers left as comments in `sitemap.xml` and `robots.txt`; update once production host is confirmed.**
+- **index.html upgrades:**
+  - Added `<meta name="description">` (275 chars), `<meta name="keywords">`, `<meta name="author">`, `<link rel="canonical">`.
+  - Added full Open Graph block (og:type, url, title, description, image, image:alt, site_name, locale).
+  - Added Twitter Card block (summary_large_image — url, title, description, image, image:alt).
+  - Added 3 JSON-LD blocks: `InsuranceAgency` (LocalBusiness subtype with address, geo, hours, areaServed), `Service` (inland marine service definition), `FAQPage` (6 Q&A entries).
+  - Added 3 visible content sections: "What Is Inland Marine Insurance for Contractors?" (3 paragraphs), "What's Covered" (8-item coverage list), "Frequently Asked Questions" (6 items).
+- **Visible word count: 779** (up from ~143 — 5.4× increase).
+- **No images present in body** — no alt-text to add. Added `og:image:alt` and `twitter:image:alt` for the placeholder OG image (`/og-image.jpg`, asset TBD).
+- **Validation:** HTML head parsed cleanly via `html.parser`; all 3 JSON-LD blocks `json.loads`-valid; sitemap.xml re-validated well-formed.
+- **Files changed:**
+  - Modified: `index.html` (head metadata block + 3 new content sections + CSS for content sections)
+  - Modified: `sitemap.xml` (`example.com` → `inland-marine-insurance.com`, lastmod → 2026-05-22, TBD comment added)
+  - Modified: `robots.txt` (`example.com` sitemap URL → `inland-marine-insurance.com`, TBD comment added)
+  - Modified: `SEO_REPORT.md` (this Round 3 section)
+
