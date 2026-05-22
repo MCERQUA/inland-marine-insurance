@@ -51,4 +51,5 @@ Disallow: /node_modules/
 Disallow: /_next/static/chunks/
 Disallow: /.git/
 
-Sitemap: https://example.com/sitemap.xml
+# NOTE: Domain assumed pending production-deploy confirmation. Update once canonical host is finalized.
+Sitemap: https://inland-marine-insurance.com/sitemap.xml
