@@ -1,3 +1,11 @@
 [build]
   command = ""
   publish = "."
+
+# Lead form — submission webhook to JamBot lead capture
+[[forms]]
+  name = "inland-marine-quote"
+
+[[notifications]]
+  form = "inland-marine-quote"
+  webhook = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=inland-marine-insurance"

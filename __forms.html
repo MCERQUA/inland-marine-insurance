@@ -1,0 +1,14 @@
+<!-- Static Netlify form detection — name must match netlify.toml [[forms]] and [[notifications]].
+     The visible form in index.html posts via fetch; this hidden form registers the
+     form name with Netlify so submission webhooks fire. -->
+<form name="inland-marine-quote" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="bot-field">
+  <input type="text" name="equipment_description">
+  <input type="text" name="total_value">
+  <input type="text" name="business_type">
+  <input type="text" name="years_in_business">
+  <input type="text" name="prior_claims">
+  <input type="text" name="prior_claims_detail">
+  <input type="text" name="phone">
+  <input type="text" name="email">
+</form>
